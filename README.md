@@ -10,24 +10,23 @@ This project will build a machine learing model that predicts whether a session 
 
 ## Dataset
 
-[Online Shoppers Purchasing Intention Dataset] (https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset) from the UCI Machine Learning Repository.
+[Online Shoppers Purchasing Intention Dataset](https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset) from the UCI Machine Learning Repository.
 
 It has:
 
 - 12,330 sessions, each from a different user, over one year
-- 17 features from (pages visited, time spent, bounce and exit rates, month, visitor, type and so on...) and 1 target, `Revenue`
-- Only **15.5** of sessions end in a purchase, so the class are imbalanced
+- 17 features (pages visited, time spent, bounce and exit rates, month, visitor, type and so on...) and 1 target, `Revenue`
+- Only **15.5%** of sessions end in a purchase, so the classes are imbalanced
 
-The dataset is by C. Okan Sakar and Yomi Kastro (2018), licensed under [CC by 4.0] (https://creativecommons.org/licenses/by/4.0/).
+The dataset is by C. Okan Sakar and Yomi Kastro (2018), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 A copy is included in `Data/online_shopper_intention.csv`
 
 ## Setup
 
-Requires python 3.10 or newer version.
+Requires python 3.10 or newer.
 
 ```bash
-git clone
-https://github.com/KhunMaungAye/ecommerce-purchase-prediction.git
+git clone https://github.com/KhunMaungAye/ecommerce-purchase-prediction.git
 cd ecommerce-purchase-prediction
 python3 -m venv .venv
 source .venv/bin/activate
@@ -41,7 +40,7 @@ On Windows, activate the environment with `.venv\Scripts\activate` instead.
 This project is still in progress.
 
 - [x] Project setup and Git workflow
-- [] Data exploration
-- [] Model training and evaluation
-- [] Prediction API
-- [] Frontend
+- [ ] Data exploration
+- [ ] Model training and evaluation
+- [ ] Prediction API
+- [ ] Frontend
