@@ -1,7 +1,7 @@
 # ___ Virtual environment ___
-# Large, specifi to machine, and rebuilt from requirements.txt
+# Large, specific to machine, and rebuilt from requirements.txt
 .venv/
-venv
+venv/
 
 # ___ Python cache ___
 # Created automatically when Python runs code
