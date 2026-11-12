@@ -23,7 +23,7 @@ A copy is included in `Data/online_shopper_intention.csv`
 
 ## Setup
 
-Requires python 3.10 or newer.
+Requires python 3.12 or newer.
 
 ```bash
 git clone https://github.com/KhunMaungAye/ecommerce-purchase-prediction.git
