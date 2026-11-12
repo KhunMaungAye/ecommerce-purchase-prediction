@@ -19,11 +19,19 @@ It has:
 - Only **15.5%** of sessions end in a purchase, so the classes are imbalanced
 
 The dataset is by C. Okan Sakar and Yomi Kastro (2018), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
-A copy is included in `Data/online_shopper_intention.csv`
+A copy is included in `Data/online_shoppers_intention.csv`
 
 ## Setup
 
-Requires python 3.12 or newer.
+Requires Python 3.12 or newer. Check your version first:
+
+```bash
+python3 --version
+```
+
+If it is older than 3.12, install a newer version from
+[python.org](https://www.python.org/downloads/) and use it by name
+(for example `python3.12` or `python3.13`) instead of `python3` below.
 
 ```bash
 git clone https://github.com/KhunMaungAye/ecommerce-purchase-prediction.git
@@ -33,7 +41,8 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-On Windows, activate the environment with `.venv\Scripts\activate` instead.
+On Windows, use `py -3.12 -m venv .venv` to create the environment
+and `.venv\Scripts\activate` to activate it.
 
 ## Project status
 
