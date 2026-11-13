@@ -19,7 +19,7 @@ It has:
 - Only **15.5%** of sessions end in a purchase, so the classes are imbalanced
 
 The dataset is by C. Okan Sakar and Yomi Kastro (2018), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
-A copy is included in `Data/online_shoppers_intention.csv`
+A copy is included in `Data/online_shoppers_intention.csv`.
 
 ## Setup
 
@@ -41,8 +41,8 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-On Windows, use `py -3.12 -m venv .venv` to create the environment
-and `.venv\Scripts\activate` to activate it.
+These steps are for macOS and Linux. On Windows, see the
+[Python venv documentation](https://docs.python.org/3/library/venv.html).
 
 ## Project status
 
