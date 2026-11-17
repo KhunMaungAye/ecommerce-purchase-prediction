@@ -6,7 +6,7 @@ Predicting whether a visitor to an online shop will make a purchase, based on ho
 
 Most visitors to an online shop leave without buying anything. If a shop can tell during a session which visitors are more likely to buy, then it can act on it, for example by showing a discount to visitors who are very close to deciding.
 
-This project will build a machine learing model that predicts whether a session ends in a purchase (`Revenue = True`).
+This project will build a machine learning model that predicts whether a session ends in a purchase (`Revenue = True`).
 
 ## Dataset
 
@@ -15,11 +15,20 @@ This project will build a machine learing model that predicts whether a session 
 It has:
 
 - 12,330 sessions, each from a different user, over one year
-- 17 features (pages visited, time spent, bounce and exit rates, month, visitor, type and so on...) and 1 target, `Revenue`
+- 17 features (pages visited, time spent, bounce and exit rates, month, visitor type and so on...) and 1 target, `Revenue`
 - Only **15.5%** of sessions end in a purchase, so the classes are imbalanced
 
 The dataset is by C. Okan Sakar and Yomi Kastro (2018), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 A copy is included in `Data/online_shoppers_intention.csv`.
+
+## Key findings from data exploration
+
+Full analysis: [`notebooks/01_data_exploration.ipynb`](notebooks/01_data_exploration.ipynb)
+
+- The data has no missing values. The 125 duplicate rows are real one-page bounce visits, so they were kept.
+- A model that always predicts "no purchase" would already be 84.5% accurate, so the model will be judged on precision and recall instead of accuracy.
+- `PageValues` separates buyers from non-buyers the most (average 27.26 vs 1.98).
+- New visitors (24.9%) and November (25.4%) have the highest purchase rates.
 
 ## Setup
 
@@ -49,7 +58,7 @@ These steps are for macOS and Linux. On Windows, see the
 This project is still in progress.
 
 - [x] Project setup and Git workflow
-- [ ] Data exploration
+- [x] Data exploration
 - [ ] Model training and evaluation
 - [ ] Prediction API
 - [ ] Frontend
