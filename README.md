@@ -30,6 +30,22 @@ Full analysis: [`notebooks/01_data_exploration.ipynb`](notebooks/01_data_explora
 - `PageValues` separates buyers from non-buyers the most (average 27.26 vs 1.98).
 - New visitors (24.9%) and November (25.4%) have the highest purchase rates.
 
+## Model results
+
+Full analysis: [`notebooks/02_modelling.ipynb`](notebooks/02_modelling.ipynb)
+
+Results on the test set (20% of sessions, never seen during training), for the buyers class:
+
+| Model                          | Accuracy  | Precision | Recall  | F1       |
+| ------------------------------ | --------- | --------- | ------- | -------- |
+| Logistic regression            | 88.1%     | 74%       | 36%     | 0.48     |
+| Logistic regression (balanced) | 84.1%     | 49%       | 74%     | 0.59     |
+| **Random forest (balanced)**   | **89.0%** | **63%**   | **70%** | **0.66** |
+
+- The **balanced random forest** is the final model. It finds **70% of buyers**, and about 2 in 3 of its "will buy" predictions are correct.
+- Handling class imbalance mattered more than the choice of model: it roughly doubled recall.
+- **Limitation:** the model depends heavily on `PageValues`. Without it, F1 drops from 0.66 to 0.35, so the model works best later in a session, after several pages have been viewed.
+
 ## Setup
 
 Requires Python 3.12 or newer. Check your version first:
@@ -59,6 +75,6 @@ This project is still in progress.
 
 - [x] Project setup and Git workflow
 - [x] Data exploration
-- [ ] Model training and evaluation
+- [x] Model training and evaluation
 - [ ] Prediction API
 - [ ] Frontend
